@@ -23,6 +23,12 @@
    <!-- Script
    ================================================== -->
 	<script src="js/modernizr.js"></script>
+   <script src="https://www.google.com/recaptcha/api.js?onload=onloadCallback"></script>
+   <script>
+      function onloadCallback(){
+         grecaptcha.execute();
+      }
+   </script>
 
    <!-- Favicons
 	================================================== -->
@@ -31,6 +37,11 @@
 </head>
 
 <body>
+
+   <button class="g-recaptcha" 
+        data-sitekey="6LehDjgbAAAAAKmBZb52CS5hwzgQA2Xb9Jq-7QXk" 
+        data-callback='onSubmit' 
+        data-action='submit'>Submit</button>
 
    <!-- Header
    ================================================== -->
